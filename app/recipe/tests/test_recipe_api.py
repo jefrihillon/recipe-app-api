@@ -120,9 +120,9 @@ class PrivateRecipeApiTests(TestCase):
         """Test partial update of a recipe"""
         original_link = 'https://example.com/recipe.pdf'
         recipe = create_recipe(
-            user = self.user,
-            title = 'sample recipe title',
-            link = original_link,
+            user=self.user,
+            title='sample recipe title',
+            link=original_link,
         )
 
         payload = {'title': 'New recipe title'}
@@ -138,7 +138,7 @@ class PrivateRecipeApiTests(TestCase):
     def test_full_update(self):
         """Test full update of recipe"""
         recipe = create_recipe(
-            user = self.user,
+            user=self.user,
             title='Sample recipe title',
             link='https://example.com/recipe.pdf',
         )
