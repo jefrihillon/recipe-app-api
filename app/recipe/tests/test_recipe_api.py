@@ -45,6 +45,7 @@ def create_user(**params):
     return get_user_model().objects.create_user(**params)
 
 
+
 class PublicRecipeApiTests(TestCase):
     """Test unauthenticated API requests"""
 
