@@ -59,7 +59,7 @@ class PublicRecipeApiTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-class PrivateRecipeApiTests(TestCase):
+class PrivateRecipeAPITests(TestCase):
     """Test authenticated API requests"""
 
     def setUp(self):
@@ -142,6 +142,7 @@ class PrivateRecipeApiTests(TestCase):
             user=self.user,
             title='Sample recipe title',
             link='https://example.com/recipe.pdf',
+            description='sample recipe description',
         )
 
         payload = {
